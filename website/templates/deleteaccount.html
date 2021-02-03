@@ -1,0 +1,30 @@
+{% extends "base.html" %} {% block title %}Delete Account{% endblock %} {% block content
+%}
+<br />
+<form method="POST">
+  <h3 align="center">Delete Account</h3>
+  <div class="form-group">
+    <label for="password">To delete your account, enter in your email and password.</label><br /><br />
+    <label for="email">Email Address</label>
+    <input
+      type="email"
+      class="form-control"
+      id="email"
+      name="email"
+      placeholder="Enter email"
+    />
+  </div>
+  <div class="form-group">
+    <label for="password">Password</label>
+    <input
+      type="password"
+      class="form-control"
+      id="password"
+      name="password"
+      placeholder="Enter password"
+    />
+  </div>
+  <br />
+  <button type="submit" class="btn btn-primary">Confirm Delete</button>
+</form>
+{% endblock %}
