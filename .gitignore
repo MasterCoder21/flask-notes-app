@@ -1,0 +1,4 @@
+__pycache__
+database.db
+poetry.lock
+pyproject.toml
