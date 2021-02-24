@@ -53,3 +53,19 @@ def delete_note():
             db.session.commit()
 
     return jsonify({})
+
+@views.route('/bugs')
+def bugs():
+  return render_template("bugs.html", user=current_user)
+
+@views.route('/about')
+def about():
+  return render_template("about.html", user=current_user)
+
+@views.route('/help')
+def help():
+  return render_template("help.html", user=current_user)
+
+@views.route('/changelog')
+def changelog():
+  return render_template("changelog.html", user=current_user)

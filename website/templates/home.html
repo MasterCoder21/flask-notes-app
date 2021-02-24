@@ -1,4 +1,4 @@
-{% extends "base.html" %} {% block title %}NoteApp v1.0.5{% endblock %} {% block content
+{% extends "base.html" %} {% block title %}NoteApp v1.0.6{% endblock %} {% block content
 %}
 <br />
 <h1 align="center">Notes</h1>
@@ -20,36 +20,4 @@
   </div>
 </form>
 <br /><br /><br />
-<h2 align="center">NotesApp Errors/Bugs</h2>
-
-<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for bugs" title="Type in a name">
-
-<ul id="myUL">
-  <li><a href="#NA0001">NA0001<br>When the app was restarted, sometimes jinja2 would return errors when a POST request was taken in on the backend.<br>Fixed: 02/01/2021</a></li>
-  <li><a href="#NA0002" style="color:red">NA0002<br>Notes of the current user would be deleted if that user attempted to update his/her account information.<br />Fixed: NOT FIXED</a></li>
-  <li><a href="#NA0003">NA0003<br>Notes were able to be composed of only white spaces<br>Fixed: 02/02/2021</a></li>
-  <li><a href="#NA0004">NA0004<br>If server and user content diverged, choosing any option would break the database and delete all notes and accounts.<br>Fixed: 02/02/2021</a></li>
-  <li><a href="#NA0005" style="color:red">NA0005<br>Hitting enter would actually cause there to be a space, therefore bugging out and negating bugfix NA0003.<br>Fixed: NOT FIXED</a></li>
-  
-</ul>
-<br />
-
-<script>
-function myFunction() {
-    var input, filter, ul, li, a, i, txtValue;
-    input = document.getElementById("myInput");
-    filter = input.value.toUpperCase();
-    ul = document.getElementById("myUL");
-    li = ul.getElementsByTagName("li");
-    for (i = 0; i < li.length; i++) {
-        a = li[i].getElementsByTagName("a")[0];
-        txtValue = a.textContent || a.innerText;
-        if (txtValue.toUpperCase().indexOf(filter) > -1) {
-            li[i].style.display = "";
-        } else {
-            li[i].style.display = "none";
-        }
-    }
-}
-</script>
 {% endblock %}
